@@ -37,11 +37,7 @@ public class Extractor {
     private static Set<String> defaultTags = new LinkedHashSet<>();
 
     static {
-        try {
-            alchemy = AlchemyAPI.GetInstanceFromFile("alchemy_key.txt");
-        } catch (IOException ex) {
-            printErr("[SEVERE] Cannot find alchemy_key.txt");
-        }
+        alchemy = AlchemyAPI.GetInstanceFromString("3a682637878391d479d57ec40e65ef5036968d5b");
         try {
             BufferedReader br = new BufferedReader(new FileReader("Tags.txt"));
             String str;
